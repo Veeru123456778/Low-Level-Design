@@ -1,0 +1,6 @@
+path: 'drive/My Drive/TrainYolov8OnCustomData/data'
+train: images/train
+val: images/train
+
+names:
+  0: number_plate
