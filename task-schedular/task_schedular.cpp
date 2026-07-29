@@ -74,6 +74,14 @@ Summary
 */
 
 
+/*
+
+Lambda Function:
+true ------> Keeps running (NO WAIT) -------> LOCKED (re-acquired by this thread) -------> Executes the line immediately after cv.wait()
+
+false ------> Goes to sleep (WAIT) -------> UNLOCKED (released so others can work) -----> Paused inside cv.wait()
+
+*/
 
 class TaskSchedular {
     unordered_map<int, vector<int>> adjList;
@@ -93,7 +101,7 @@ class TaskSchedular {
                 unique_lock<mutex> ulock(mtx); // we need to use the cv.wait() in this thats why we have used unique_lock and also unique_lock has Highly flexible (Can lock and unlock manually anytime). Slightly heavier (Stores lock status flag).
 
                 cv.wait(ulock, [this]() {
-                    return !taskQueue.empty() || stopSchedular;
+                    return !taskQueue.empty() || stopSchedular; // if this line comes true then it will get out of the wait loop and execute the next line of code.. and if lambda function of value comes false then it will wait
                 });
 
                 if (stopSchedular && taskQueue.empty()) return;
