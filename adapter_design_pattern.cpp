@@ -1,8 +1,17 @@
-// Real Life Adapter Use Cases-> LAN C Type Adapter -> converts lan cable to c type to plug in to laptop , Charger Socket adpater -> International sockets are different so need to use adapter to plug in charger....
+// Real Life Adapter Use Cases-> LAN C Type Adapter -> converts lan cable to c type to plug in to laptop , 
+// Charger Socket adpater -> International sockets are different so need to use adapter to plug in charger....
+
 // Similarly, Adapters helps us as an intermediate between two different interfaces(Contracts, abstract class) 
+
 // Interface1 --------- Adapter --------- Interface2
+
 // Agar hmare paas (Existing Code) h or ham isme kuch (Third party service -> Payment Service) ko integrate krna chahte h to ham Ya to Existing code m hi Third Party service k functions ko call krade -> par isse hmara code tightly coupled hojayega means agar kl ko hmari third party service m modifications hue / ya hmne third party service hi change krdi to hme sab kuch Apne Existing code m bhi change krna pdega jo ki (Open Close Principle ko break krta h)
+
 // Adapter Existing code and Third Party service dono se interact krega but existing code ko third party service ke bare me kuch nhi pta hoga...
+
+// Ek hamare paas class adapter hota h jo ki multiple inheritance ka use karke dono interfaces ko implement krta h or ek object adapter hota h jo ki third party k saath composition use krta h and Hmare Code ke Interface ke sath inheritance use krta h=
+
+// Ek use case agar hme apne modern code ko interact krana  h apne legacy code se.
 
 #include<bits/stdc++.h>
 using namespace std;
