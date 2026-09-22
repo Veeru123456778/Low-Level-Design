@@ -5,6 +5,7 @@
 // Hmm loadData, PreProcess and saveResults ko parent class (Model Trainer class) me bhi define kar skte h or agar kisi child class ko change krne h ye methods to vo override bhi kar skti h 
 // More Ex: Like Payment steps -> Fixed template to validate the balance and process the payment request....
 
+// It fixes the structure of the pipeline and allows the child classes to implement the specific steps of the pipeline as needed. This ensures consistency across different implementations while allowing flexibility for customization.
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -17,7 +18,7 @@ class ModelTrainer{
    virtual void evaluateModel() = 0;
    virtual void saveResults() = 0;
 
-    void templateMethod(){
+   void templateMethod(){  // Ye important h Template design pattern me
      cout<<"Pipeline Started Executing...."<<endl;
      loadData();
      preProcessData();
@@ -49,7 +50,7 @@ class SVMModelTrainer:public ModelTrainer{
    void saveResults(){
       cout<<"Results Saved Successfully...."<<endl;
    }
-
+   
 };
 
 class NeuralNetworkModelTrainer: public ModelTrainer{
