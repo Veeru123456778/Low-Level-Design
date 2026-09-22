@@ -20,7 +20,7 @@ class Mario:public ICharacter{
 
 class Decorator: public ICharacter{
    protected:
-   ICharacter* ch;
+   ICharacter* ch; // Composition 
    public:
    Decorator(ICharacter* c){
       ch = c;
