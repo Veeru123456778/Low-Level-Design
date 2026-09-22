@@ -11,6 +11,7 @@ Ex: For 2D shapes we will have only Area
 High level module should not depend on low level module rather they both should depend on abstraction
 
 High level Module : Like business logic Application layer
+
 Low level Module : Like jo kisi system se interact kre like databases (sql, mongo) ya file system
 
 To agar hme different db's (sql,mongo db) me data save krana h to hm interface ke through in dono classes ko bnayenge jisse application uss interface se interact kre or instance ka method call hojaye like strategy principle.
