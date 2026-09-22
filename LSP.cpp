@@ -3,6 +3,10 @@ using namespace std;
 
 // The Liskov Substitution Principle states that objects of a superclass should be replaceable with objects of a subclass without breaking the application or changing expected behavior.
 
+// The substitution only goes one way: you can always use a child object where a parent object is expected, but you cannot use a parent object where a child object is expected.
+
+// Because a child class extends the parent, it often introduces additional methods and fields that the parent class simply does not possess.
+
 class Non_Withdrawable_Account{
     public:
     virtual void deposit(double amount) = 0;
