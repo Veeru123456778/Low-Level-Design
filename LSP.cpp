@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// The Liskov Substitution Principle states that objects of a superclass should be replaceable with objects of a subclass without breaking the application or changing expected behavior.
+
 class Non_Withdrawable_Account{
     public:
     virtual void deposit(double amount) = 0;
