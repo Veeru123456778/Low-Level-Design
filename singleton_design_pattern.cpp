@@ -1,10 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Singleton Design Pattern: It is only for the 
+
 // Yha problem h ki ye thread safe nhi h , multiple threads hmari application ko ek saath run kar skti h
 class Singleton{
     private:
-    static Singleton* instance;
+    static Singleton* instance; // for java we can write this { = nullptr } directly
     static mutex m;
 
     Singleton(){
@@ -37,7 +39,7 @@ class Singleton{
 };
 
 
-Singleton* Singleton::instance = nullptr;
+Singleton* Singleton::instance = nullptr; // C++ me aise assign krna padega java me hm jidhar declare kra tha class me vhi p assign kr skte h
 
 
 int main(){
@@ -47,3 +49,7 @@ int main(){
    cout<<(obj==anotherObj)<<endl;
 }
 
+
+// Hmm ek aur method use kar skte h that is eager initialization means main (application run hone se phle hi object initialize krde) using 
+// Singleton* Singleton::instance = new Singleton(); - like this 
+// But iske disadvantages h ki agar object bhot heavy hua build krne me to vo application se phle object create hojaega or falty me memory khayega.
